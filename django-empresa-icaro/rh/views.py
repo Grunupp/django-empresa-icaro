@@ -1,19 +1,23 @@
 from django.shortcuts import redirect, render
-from .models import Funcionarios
+from .models import Funcionarios, Produtos, Clientes
 from .forms import ContatoModelForm
 # Create your views here.
 def home(request):
     return render(request,'home.html')
-def produtos(request):
-    return render(request,'produtos.html')
-def clientes(request):
-    return render(request,'clientes.html')
+
 def funcionarios(request):
     funcionarios = Funcionarios.objects.filter(status=True)
-    context = {
-        'funcionarios': funcionarios
-    }
+    context = {'funcionarios': funcionarios}
     return render(request,'funcionarios.html',context)
+
+def produtos(request):
+    produtos  = Produtos.objects.all()
+    context = {'produtos': produtos}
+    return render(request,'produtos.html',context)
+def clientes(request):
+    clientes   = Clientes.objects.all()
+    context = {'clientes': clientes}
+    return render(request,'clientes.html',context)
 
 # A view principal do formulário
 def formulario_contato_view(request):

@@ -15,7 +15,30 @@ class Funcionarios(models.Model):
         verbose_name_plural = "Funcionários" # Define o nome plural correto
     def __str__(self):
         return self.nome
+
+class Produtos(models.Model):
+    foto = models.ImageField(null=True, blank=True)
+    nome = models.CharField(max_length=80)
+    categoria = models.CharField(max_length=50)
+    descricao = models.CharField(max_length=200)
+    valor = models.FloatField(max_length=20)
     
+    class Meta:
+        verbose_name = "Produto"
+        verbose_name_plural = "Produtos"
+    def __str__(self):
+        return f"Nome: {self.nome}, Categoria: {self.categoria}, Tipo: {self.descricao}, preço: {self.valor} "
+    
+class Clientes(models.Model):
+    nome = models.CharField(max_length=100)
+    idade = models.DateField()
+    email = models.EmailField(unique=True)
+    contato = models.CharField(max_length=18, blank=True, null=True)   
+    
+    class Meta:
+        verbose_name = "Cliente"
+        verbose_name_plural = "Clientes"
+
     # contato/models.py
 from django.db import models
 from django.utils import timezone
@@ -34,4 +57,7 @@ class MensagemContato(models.Model):
     class Meta:
         verbose_name = "Mensagem de Contato"
         verbose_name_plural = "Mensagens de Contato"
-        ordering = ['-data_envio']
+        ordering = ['-data_envio'
+                    ]
+
+    

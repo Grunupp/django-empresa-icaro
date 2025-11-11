@@ -2,6 +2,18 @@
 {% block title %}Produtos {% endblock %}
 
 {% block content %}
-    <h3>Página de Produtos</h3>
+    <h3>Página de Produtos</h3> 
+    
+      {% for produto in produtos %}
+    <section class="card-produtos">
+            <img src="{{ produto.foto.url }}" alt="Foto de {{produto.nome}}">
 
+        <div class="info-produto">
+            <h4>Nome do Produto: {{produto.nome}}</h4>
+            <p>categoria: {{produto.categoria}} </p>
+            <p>descrição: {{produto.descricao}} </p>
+            <p>valor: {{produto.valor}}</p>
+        </div>
+    </section>
+    {% endfor %}
 {% endblock %}

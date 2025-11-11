@@ -69,3 +69,8 @@ footer {
     font-weight: bold;    
     padding: 1rem;
 }
+.card-produtos img {
+    width: 150px;
+    height: 180px;
+    
+}
