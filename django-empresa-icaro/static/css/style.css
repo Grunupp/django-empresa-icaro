@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{    
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #4f4f52;
+    color:  white;
     display: flex;
     flex-direction: column;
     
@@ -20,7 +20,7 @@ header {
 }
 
 .header {
-    background-color: blueviolet;
+    background-color: rgb(99, 104, 195);
     color: white;
     padding: 1rem;
 }
@@ -73,4 +73,7 @@ footer {
     width: 150px;
     height: 180px;
     
+}
+.card-clientes{
+    margin: 40px;
 }

@@ -14,6 +14,7 @@ def produtos(request):
     produtos  = Produtos.objects.all()
     context = {'produtos': produtos}
     return render(request,'produtos.html',context)
+
 def clientes(request):
     clientes   = Clientes.objects.all()
     context = {'clientes': clientes}

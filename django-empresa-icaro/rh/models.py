@@ -30,10 +30,10 @@ class Produtos(models.Model):
         return f"Nome: {self.nome}, Categoria: {self.categoria}, Tipo: {self.descricao}, preço: {self.valor} "
     
 class Clientes(models.Model):
-    nome = models.CharField(max_length=100)
+    nome= models.CharField(max_length=100)
     idade = models.DateField()
     email = models.EmailField(unique=True)
-    contato = models.CharField(max_length=18, blank=True, null=True)   
+    contato = models.CharField(max_length=18, blank=True, null=True, unique=True)   
     
     class Meta:
         verbose_name = "Cliente"

@@ -4,4 +4,15 @@
 {% block content %}
     <h3>Página de Clientes</h3>
 
+    {%for cliente in clientes %}
+        <section class="card-clientes">   
+                <div>
+                    <h4>Nome: {{cliente.nome}}</h4>
+                    <h4>idade: {{cliente.idade}}</h4>
+                    <h4>Email: {{cliente.email}}</h4>
+                    <h4>Contato: {{cliente.contato}}</h4>
+                </div>
+            
+        </section>
+    {%endfor%}
 {% endblock %}
