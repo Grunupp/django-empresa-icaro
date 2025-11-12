@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Funcionarios{% endblock %}
+
+{% block content %}
+    <h1> Funcionários</h1>
+    
+    {% for funcionario in funcionarios %}
+    <section class="card-funcionario">
+        {% if funcionario.foto.url != null %}
+        <img src="{{ funcionario.foto.url }}" alt="Foto de {{funcionario.nome}}">
+        {% else %}
+        <img src="/static/images/usuario-sem-imagem.png" alt="Foto padrão de usuário">
+        {% endif %}
+        <div class="info-funcionario">
+            <h4>{{funcionario.nome}}</h4>
+            <p>Cargo: {{funcionario.cargo}} </p>
+            <p>Departamento: {{funcionario.departamento}} </p>
+            <p>Data de Contratação: {{funcionario.data_contratacao}}</p>
+            {% if funcionario.status == True %}
+                <p>Situação: Ativo</p>
+            {% endif %}
+        </div>
+    </section>
+    {% endfor %}
+
+{% endblock %}

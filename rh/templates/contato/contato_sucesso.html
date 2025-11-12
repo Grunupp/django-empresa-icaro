@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Contatos{% endblock %}
+
+{% block content %}
+    <div class="alert alert-success">
+        <h1>Mensagem Enviada com Sucesso!</h1>
+        <p>Obrigado pelo seu contato. Sua mensagem foi registrada.</p>
+        <a href="{% url 'contatos' %}">Enviar outra mensagem</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Contatos{% endblock %}
+
+{% block content %}
+<h2>Fale Conosco</h2>
+<p>Sua mensagem será salva em nosso banco de dados.</p>
+<form method="POST" class="col-md-6" >
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form> 
+
+{% comment %} <form method="POST" class="col-md-6" >
+    {% csrf_token %}
+    
+    <div class="mb-3">
+        <label for="{{ form.nome.id_for_label }}" class="form-label">
+            {{ form.nome.label }}
+        </label>
+        {{ form.nome }} {% if form.nome.errors %}
+            <div class="alert alert-danger">
+                {{ form.nome.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label for="{{ form.email.id_for_label }}" class="form-label">
+            {{ form.email.label }}
+        </label>
+        {{ form.email }}
+        {% if form.email.errors %}
+            <div class="alert alert-danger">
+                {{ form.email.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label for="{{ form.mensagem.id_for_label }}" class="form-label">
+            {{ form.mensagem.label }}
+        </label>
+        {{ form.mensagem }}
+        {% if form.mensagem.errors %}
+            <div class="alert alert-danger">
+                {{ form.mensagem.errors }}
+            </div>
+        {% endif %}
+    </div>
+    
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form> {% endcomment %}
+    
+
+{% endblock %}
