@@ -7,7 +7,8 @@
         <a href="{% url 'posts' %}">Posts</a>
         <a href="{% url 'contatos' %}">Contatos</a>
     {% else %}
-        <a href="{% url '' %}">Entrar</a>
-        <a href="{% url '' %}">Registrar</a>
+        <a href="{% url 'home' %}">Início</a>
+        <a href="{% url 'login' %}">Entrar</a>
+        <a href="{% url 'registrar' %}">Registrar</a>
     {% endif %}
 </nav>

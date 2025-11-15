@@ -6,6 +6,9 @@ urlpatterns = [
     path('produtos/',views.produtos, name='produtos'),
     path('clientes/',views.clientes, name='clientes'),
     path('funcionarios/',views.funcionarios, name='funcionarios'),
+    path('login/',views.login_view, name='login'),
+    path('logout/',views.logout_view ,name='logout'),
+    path('registrar/',views.registrar_view ,name='registrar'),
    # A URL para a página do formulário
     # Ex: http://127.0.0.1:8000/contato/
     path('contato/', views.formulario_contato_view, name='contatos'),
