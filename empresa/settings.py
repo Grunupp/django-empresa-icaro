@@ -61,6 +61,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -68,6 +69,15 @@ TEMPLATES = [
         },
     },
 ]
+
+# LOGIN_URL especifica a URL para redirecionar usuários para login.
+LOGIN_URL = 'login'
+
+# LOGIN_REDIRECT_URL especifica a URL para redirecionar usuários após login bem-sucedido.
+LOGIN_REDIRECT_URL = 'home'
+
+# LOGOUT_REDIRECT_URL especifica a URL para redirecionar usuários após logout.
+LOGOUT_REDIRECT_URL= 'login'
 
 WSGI_APPLICATION = 'empresa.wsgi.application'
 
@@ -129,3 +139,6 @@ MEDIA_ROOT = BASE_DIR / 'static' / 'images' / 'produtos'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+

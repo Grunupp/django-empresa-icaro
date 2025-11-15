@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}criation {% endblock %}
+{% block content %}
+<main class="pagina-de-login">
+    <section class="registro-container">
+        <h1>crirar conta</h1>
+        <form class="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">comfirmar criação</button>
+        </form>
+    </section>
+</main>
+{% endblock %}

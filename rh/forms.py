@@ -1,5 +1,6 @@
 # contato/forms.py
 from django import forms
+from django.contrib.auth.models import User
 from .models import MensagemContato
 
 class ContatoModelForm(forms.ModelForm):
@@ -26,3 +27,21 @@ class ContatoModelForm(forms.ModelForm):
             'nome': 'Nome Completo',
             'email': 'Seu E-mail',
         }
+
+class LoginForm(forms.Form):
+    usuario = forms.CharField(label="Usuário")
+    senha = forms.CharField(label="senha", widget=forms.PasswordInput)
+
+class RegistroForm(forms.Form):
+    senha = forms.CharField(label="senha", widget=forms.PasswordInput)
+    senha2 = forms.CharField(label="Comfirme a senha", widget=forms.PasswordInput)
+    
+    class Meta:
+        model = User
+        fields = ('username','email')
+    
+    def Clean(self):
+        cleaned =super().clean()
+        if cleaned.get('senha') != cleaned.get('senha2'):
+            raise forms.ValidationError("senhas diferentes")
+        return cleaned
