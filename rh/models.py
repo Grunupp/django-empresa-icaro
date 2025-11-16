@@ -31,8 +31,8 @@ class Produtos(models.Model):
     
 class Clientes(models.Model):
     nome= models.CharField(max_length=100)
-    idade = models.CharField(max_length=3)
-    email = models.EmailField(max_length=100,unique=True)
+    idade= models.CharField(max_length=3)
+    email= models.EmailField(max_length=50, unique=True)
     contato = models.CharField(max_length=18, blank=True, null=True, unique=True)   
     
     class Meta:

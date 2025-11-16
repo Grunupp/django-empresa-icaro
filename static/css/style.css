@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{    
-    background-color: #4f4f52;
-    color:  white;
+    background-color: #535151;
+    color:  #ffffff;
     display: flex;
     flex-direction: column;
     
@@ -20,14 +20,14 @@ header {
 }
 
 .header {
-    background-color: rgb(99, 104, 195);
-    color: white;
+    background-color: #9499ea;
+    color: #ffffff;
     padding: 1rem;
 }
 
 .header a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
     margin-right: 1rem;
 }
@@ -39,7 +39,7 @@ main{
 .card-funcionario {
     display:flex;
     width: 36rem;
-    background-color: #fff;
+    background-color: #535151;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -64,16 +64,99 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: #9499ea;
     color: #fff;
     font-weight: bold;    
     padding: 1rem;
 }
+.card-produtos{
+    display:flex;
+    width: 36rem;
+    background-color: #535151;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
 .card-produtos img {
     width: 150px;
     height: 180px;
+    margin-right: 25px;
     
 }
 .card-clientes{
-    margin: 40px;
+    display:flex;
+    width: 36rem;
+    background-color: #535151;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.pag-registro{
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #535151;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 24rem;
+    height: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-container {    
+    position: absolute;
+    display: flex;    
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    margin-top: 1rem;
+}
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 92.5vh; 
+
+}
+.login{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #535151;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 24rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login button{
+    padding: 0.7rem;
+    width: 100%;       
+    background-color: #9499ea;
+    color: #fff;    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login button:hover{
+    background-color: #9499ea;
+} 
+
+
+

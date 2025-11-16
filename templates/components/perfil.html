@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content%}
+<main>
+    <h1>Perfil</h1>
+    <p>Último login: {{request.user.last_login }}</p>
+    <p>ID de sessão atual: {{request.session.session_key }}</p>
+</main>
+{% endblock %}
